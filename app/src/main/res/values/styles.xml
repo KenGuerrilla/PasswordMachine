@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_ocean_blue</item>
+        <item name="colorPrimaryDark">@color/light_blue_900</item>
+        <item name="colorAccent">@color/red_A200</item>
+    </style>
+
+    <style name="MaterialButtonWithOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+
+    </style>
+
+    <style name="MaterialTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+
+    </style>
+
+    <style name="MaterialTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    </style>
+
+    <!-- <Material TextView -->
+    <style name="TextViewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="background">@drawable/textview_border_style</item>
+    </style>
+
+</resources>
