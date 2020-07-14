@@ -6,38 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/mainActivity_input_cardView"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/MaterialTextInputLayout"
+        android:id="@+id/mainActivity_input_textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/mainActivity_output_cardView"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:hint="@string/mainActivity_input_hint"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mainActivity_convert_button">
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="top"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/MaterialTextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Input"
-                android:layout_margin="8dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="top"/>
-            </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
+    <Button
+        style="@style/MaterialButtonWithOutline"
+        android:id="@+id/mainActivity_convert_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mainActivity_convert_button_text"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActivity_input_textInputLayout"
+        app:layout_constraintBottom_toTopOf="@id/mainActivity_output_cardView"
+        />
 
 
     <androidx.cardview.widget.CardView
@@ -48,7 +46,7 @@
         app:layout_constraintBottom_toTopOf="@id/mainActivity_copy_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainActivity_input_cardView">
+        app:layout_constraintTop_toBottomOf="@id/mainActivity_convert_button">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -56,9 +54,10 @@
 
         <TextView
             style="@style/TextViewStyle"
+            android:id="@+id/mainActivity_output_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Output"
+            android:text="@string/mainActivity_output_hint"
             android:padding="12dp"
             />
 
@@ -70,7 +69,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Copy"
+        android:text="@string/mainActivity_copy_button_text"
         android:textAllCaps="false"
         android:layout_margin="8dp"
         app:layout_constraintTop_toBottomOf="@id/mainActivity_output_cardView"
@@ -84,7 +83,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Clean"
+        android:text="@string/mainActivity_clear_button"
         android:textAllCaps="false"
         android:layout_margin="8dp"
         app:layout_constraintTop_toTopOf="@id/mainActivity_copy_button"

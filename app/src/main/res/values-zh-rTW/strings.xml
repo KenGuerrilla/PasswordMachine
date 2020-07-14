@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">帕斯沃德機</string>
+    <string name="mainActivity_input_hint">輸入</string>
+    <string name="mainActivity_output_hint">輸出</string>
+    <string name="mainActivity_convert_button_text">轉換</string>
+    <string name="mainActivity_copy_button_text">複製</string>
+    <string name="mainActivity_clear_button">清除</string>
+</resources>
