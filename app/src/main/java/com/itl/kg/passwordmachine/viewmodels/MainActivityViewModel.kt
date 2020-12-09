@@ -9,7 +9,10 @@ import androidx.lifecycle.ViewModel
 import com.itl.kg.passwordmachine.module.StringBlender
 
 
-class MainActivityViewModel internal constructor(private val context: Context, private val blender: StringBlender) : ViewModel() {
+class MainActivityViewModel internal constructor(
+    private val context: Context,
+    private val blender: StringBlender
+) : ViewModel() {
 
     private val resultLiveData = MutableLiveData<String>()
 

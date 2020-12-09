@@ -10,14 +10,13 @@ import java.lang.StringBuilder
  * > 2. letter to ascii
  * > 3. group number
  * > 4. grouped number to letter by cook table index
- * > 5. check result was greater outputMaxSize
- * > 6. if it was true then back to step 2
+ * > 5. Checking the result from the method greater value outputMaxSize , if it was true then back to step 2
  *
  */
 
 
 class LookTableModule(
-    private val groupSize: Int = 3,
+    private val groupSize: Int = 2,
     private val fillChar: Char = '0'
 ): BlenderModule {
 
