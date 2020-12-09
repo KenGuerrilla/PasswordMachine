@@ -57,7 +57,7 @@
             android:id="@+id/mainActivity_output_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/mainActivity_output_hint"
+            android:hint="@string/mainActivity_output_hint"
             android:padding="12dp"
             />
 
