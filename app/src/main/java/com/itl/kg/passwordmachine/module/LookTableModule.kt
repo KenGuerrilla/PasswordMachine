@@ -4,17 +4,6 @@ import java.lang.IllegalArgumentException
 import java.lang.NumberFormatException
 import java.lang.StringBuilder
 
-/**
- *
- * > 1. input
- * > 2. letter to ascii
- * > 3. group number
- * > 4. grouped number to letter by cook table index
- * > 5. Checking the result from the method greater value outputMaxSize , if it was true then back to step 2
- *
- */
-
-
 class LookTableModule(
     private val groupSize: Int = 2,
     private val fillChar: Char = '0'
