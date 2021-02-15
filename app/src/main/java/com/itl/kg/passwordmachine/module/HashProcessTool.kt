@@ -3,7 +3,7 @@ package com.itl.kg.passwordmachine.module
 import java.math.BigInteger
 import java.security.MessageDigest
 
-class HashHelper {
+class HashProcessTool {
 
     private val md = MessageDigest.getInstance("SHA-512")
 

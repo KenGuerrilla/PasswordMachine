@@ -19,7 +19,8 @@ class MainActivityViewModel internal constructor(
     fun getResultLiveData() = resultLiveData as LiveData<String>
 
     fun convert(input: String) {
-        resultLiveData.value = blender.process(input)
+//        resultLiveData.value = blender.lookTableWithHash(input)
+        resultLiveData.value = blender.hashString(input)
     }
 
     fun copyToClipboard(clipString: String) {

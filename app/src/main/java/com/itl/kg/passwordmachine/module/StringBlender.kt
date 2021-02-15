@@ -1,14 +1,17 @@
 package com.itl.kg.passwordmachine.module
 
+import java.util.*
+
 
 class StringBlender(
     private val outputMaxSize: Int = 8,
     private val module: BlenderModule = LookTableModule()
 ) {
 
-    private val hashHelper = HashHelper()
+    private val hashHelper = HashProcessTool()
 
-    fun process(input: String): String {
+    @Deprecated("查表法還需要研究")
+    fun lookTableWithHash(input: String): String {
 
         var output = hashHelper.saltString(input)
 
@@ -18,4 +21,10 @@ class StringBlender(
 
         return output
     }
+
+    fun hashString(input: String): String {
+        val result = hashHelper.saltString(input).toUpperCase(Locale.getDefault())
+        return result.slice(0 until outputMaxSize)
+    }
+
 }

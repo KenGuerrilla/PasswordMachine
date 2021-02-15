@@ -4,6 +4,13 @@ import java.lang.IllegalArgumentException
 import java.lang.NumberFormatException
 import java.lang.StringBuilder
 
+/**
+ *
+ *  查表法要做更動，透過間隔的方式來取出相對應的字串
+ *  groupSize一樣維持在兩位數，對其使用materialList.size()的數值做餘數處理
+ *
+ */
+
 class LookTableModule(
     private val groupSize: Int = 2,
     private val fillChar: Char = '0'

@@ -15,7 +15,7 @@ class StringBlenderTest {
 
     @Test
     fun processTest() {
-        val result = blenderDefaultModule.process(testMessage)
+        val result = blenderDefaultModule.lookTableWithHash(testMessage)
         assertTrue(result == testMessageFinal)
     }
 }
